@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <p>
+        </p>
+        <script>
+            let userWord = prompt("Type a word to devowelize: ");
+            userWord = Devowelize(userWord);
+            alert(userWord);
+
+            function Devowelize (word)
+            {
+                for(let i = 0; i <= word.length; i++)
+                {
+                    let eatChars = "aeiou"
+
+                    for(let i2 = 0; i2 <= eatChars.length; i2++)
+                    {
+                        // For testing =>
+                        // console.log(word);
+                        if (word[i] == eatChars[i2])
+                        {
+                            word = word.replace(word[i], "");
+
+                            // For testing =>
+                            // console.log(word);
+                        }
+                    }
+                }
+
+                return word
+            }
+        </script>
+    </body>
+</html> 
